@@ -8,18 +8,14 @@
 [image3]: ./readme_images/grayscale.jpg "Grayscaling"
 [image4]: ./readme_images/CLAHE.jpg "CLAHE"
 [image5]: ./readme_images/augmentation.jpg "Augmentation"
-[image6]: ./readme_images/img1.jpg "Image 1"
-[image7]: ./readme_images/img2.jpg "Image 2"
-[image8]: ./readme_images/img3.jpg "Image 3"
-[image9]: ./readme_images/img4.jpg "Image 4"
-[image10]: ./readme_images/img5.jpg "Image 5"
-[image11]: ./readme_images/softmax1.jpg "Softmax 1"
-[image12]: ./readme_images/softmax2.jpg "Softmax 2"
-[image13]: ./readme_images/softmax3.jpg "Softmax 3"
-[image14]: ./readme_images/softmax4.jpg "Softmax 4"
-[image15]: ./readme_images/softmax5.jpg "Softmax 5"
-[image16]: ./readme_images/loss.png "Loss"
-[image17]: ./readme_images/accuracy.png "Accuracy"
+[image6]: ./readme_images/loss.png "Loss"
+[image7]: ./readme_images/accuracy.png "Accuracy"
+[image8]: ./readme_images/softmax1.jpg "Softmax 1"
+[image9]: ./readme_images/softmax2.jpg "Softmax 2"
+[image10]: ./readme_images/softmax3.jpg "Softmax 3"
+[image11]: ./readme_images/softmax4.jpg "Softmax 4"
+[image12]: ./readme_images/softmax5.jpg "Softmax 5"
+
 
 Overview
 ---
@@ -31,7 +27,7 @@ Here is a link to my [project code](./Traffic_Sign_Classifier.ipynb) in an Ipyth
 
 Table of contents
 ---
-* [Data Set Summary & Exploration](#data-set-summary-&-exploration)
+* [Data Set Summary & Exploration](#data-set-summary--exploration)
 * [Preprocessing](#preprocessing)
 * [Model Architecture](#model-architecture)
 * [Training](#training)
@@ -72,11 +68,11 @@ Here is an example of CLAHE applied after grayscaling:
 
 ![alt text][image4]
 
-As a last step, I normalized the image data because doing so that it has zero mean and equal variance.
+As a last step, I normalized the image data so that it has zero mean and equal variance.
 
 #### Data Augmentation
 
-To add more data to the the data set, I applied changes in rotation, shear, zoom & brightness randomly to classes with less number of examples.
+To add more data to the the training set, I applied changes in rotation, shear, zoom & brightness randomly to classes with less number of examples.
 
 Here is an example of an original image and an augmented image:
 
@@ -139,15 +135,14 @@ My final model results were:
 
 Here are the loss and accuracy plots for training and validation during the training process:
 
-![alt text][image16] ![alt text][image17]
+![alt text][image6] ![alt text][image7]
 
 
 Testing
 ---
 Here are five German traffic signs that I found on the web:
 
-![alt text][image6] ![alt text][image7] ![alt text][image8]
-![alt text][image9] ![alt text][image10]
+<img src="./readme_images/img1.jpg" width="170"/> <img src="./readme_images/img2.jpg" width="170"/> <img src="./readme_images/img3.jpg" width="170"/> <img src="./readme_images/img4.jpg" width="170"/> <img src="./readme_images/img5.jpg" width="170"/>
 
 The first two images might be difficult to classify because other sign types are presented in the background.
 
@@ -180,22 +175,22 @@ Here are the top 5 softmax probabilities for each image represented as bar chart
 
 ##### Image 1
 
-![alt text][image11]
+![alt text][image8]
 
 ##### Image 2
 
-![alt text][image12]
+![alt text][image9]
 
 ##### Image 3
 
-![alt text][image13]
+![alt text][image10]
 
 ##### Image 4
 
-![alt text][image14]
+![alt text][image11]
 
 Here is interesting to see how the model is also predicting speed limit signs which is what the graffiti is trying to represent. However, the 30km/h sign is surprisingly not included in the top 5 probabilities.
 
 ##### Image 5
 
-![alt text][image15]
+![alt text][image12]
